@@ -17,7 +17,7 @@ class User<T> {
         this.phone = phone;
     }
 }
-public class PhoneFunction {
+class PhoneFunction {
     public static void call(User<? extends Phone> user) {
         System.out.println("-".repeat(20));
         System.out.println("user.phone = " + user.phone.getClass().getSimpleName());
@@ -35,7 +35,7 @@ public class PhoneFunction {
     }
     public static void recordVoice(User<? super Galaxy> user) {
         System.out.println("-".repeat(20));
-        System.out.println("user.phone = " user.phone.getClass().getSimpleName());
+        System.out.println("user.phone = " + user.phone.getClass().getSimpleName());
         System.out.println("안드로이드 폰에서만 통화 녹음이 가능합니다.");
     }
 }
